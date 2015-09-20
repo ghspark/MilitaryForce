@@ -3,6 +3,7 @@
     package="com.gh.app.militaryforce" >
 
     <application
+        android:name=".util.AppController"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -10,6 +11,11 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".activity.StartActivity"
+            android:label="@string/title_activity_start" >
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
