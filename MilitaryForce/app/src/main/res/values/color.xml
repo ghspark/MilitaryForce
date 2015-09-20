@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="radio_checked_color">#104E8B</color>
+	<color name="radio_unchecked_color">#0F0F0F</color>
+	<color name="green">#228B22</color>
+	<color name="black">#101010</color>
+	<color name="moregrey">#D1D1D1</color>
+	<color name="grey">#E5E5E5</color>
+	<color name="popbackground">#F0F8FF</color>
+	<color name="blue">#87CEEB</color>
+	<color name="purple">#836FFF</color>
+	<color name="light_green">#7CCD7C</color>
+	<color name="pink">#EE82EE</color>
+	<color name="light_blue">#63B8FF</color>
+	<color name="yellow">#EEDC82</color>
+	<color name="drak_grey">#828282</color>
+	<color name="orange">#EE9A00</color>
+	<color name="light_grey">#E6E6FA</color>
+	<color name="red">#FF0000</color>
+	<color name="white">#FFFFFF</color>
+	<color name="dark_blue">#436EEE</color>
+
+	<color name="color_letter_text_normal">#9da0a4</color>
+    <color name="base_bg">#f4f6f6</color>
+    <color name="base_actionbar_bg">#f5f5f5</color>
+    <color name="transparent">#FCFCFC</color>
+    <color name="hourse_find_bg">#838B83</color>
+    
+    <color name="light_grey_bg">#778899</color>
+    
+    
+</resources>
