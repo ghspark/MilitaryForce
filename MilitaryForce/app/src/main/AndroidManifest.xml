@@ -45,7 +45,7 @@
             android:label="@string/app_name"></activity>
         <activity
             android:name=".activity.StartActivity"
-            android:label="@string/title_activity_start">
+            android:label="资讯一点通">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
