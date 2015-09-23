@@ -1,23 +1,33 @@
 package com.gh.app.militaryforce;
 
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.RotateAnimation;
 import android.widget.ImageView;
 import android.widget.TabHost;
 import android.widget.TextView;
 
+import com.gh.app.militaryforce.activity.CityActivity;
 import com.gh.app.militaryforce.ui.MainTab;
 import com.gh.app.militaryforce.widget.MyFragmentTabHost;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-public class MainActivity extends FragmentActivity {
+public class MainActivity extends FragmentActivity implements View.OnClickListener {
     @Bind(R.id.tabhost)
     MyFragmentTabHost mTabHost;
+    @Bind(R.id.left_point)
+    ImageView left_point;
+
+    @Bind(R.id.city_name)
+    TextView city_name;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,16 +38,18 @@ public class MainActivity extends FragmentActivity {
 
     }
 
-    public void initViews(){
+    public void initViews() {
         //mTabHost.setup(getLocalActivityManager());
         mTabHost.setup(this, getSupportFragmentManager(), R.id.realtabcontent);
         mTabHost.getTabWidget().setDividerDrawable(null);
         initTabs();
         mTabHost.setCurrentTab(0);
+        left_point.setOnClickListener(this);
+
 
     }
 
-    private void initTabs(){
+    private void initTabs() {
         MainTab[] tabs = MainTab.values();
         final int size = tabs.length;
         for (int i = 0; i < size; i++) {
@@ -47,7 +59,7 @@ public class MainActivity extends FragmentActivity {
                     .inflate(R.layout.tab_indicator, null);
             TextView title = (TextView) indicator.findViewById(R.id.tab_title);
 
-            ImageView icon= (ImageView) indicator.findViewById(R.id.tab_icon);
+            ImageView icon = (ImageView) indicator.findViewById(R.id.tab_icon);
             Drawable drawable = this.getResources().getDrawable(
                     mainTab.getResIcon());
             icon.setImageDrawable(drawable);
@@ -64,24 +76,57 @@ public class MainActivity extends FragmentActivity {
             });
             mTabHost.addTab(tab, mainTab.getClz(), null);
 
-
-//            mTabHost.getTabWidget().getChildAt(i).setOnTouchListener(new View.OnTouchListener() {
-//                @Override
-//                public boolean onTouch(View v, MotionEvent event) {
-//                    for (int j = 0; j < size; j++) {
-//                        if(j==i){
-//                            TextView tab_title = (TextView) indicator.findViewById(R.id.tab_title);
-//                            tab_title.setTextColor(getResources().getColor(R.color.dark_blue));
-//                        }
-//                    }
-//                    return false;
-//                }
-//            });
-
-
         }
 
     }
 
+    public void selectCity() {
+        RotateAnimation ra = new RotateAnimation(0, 360, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
+        ra.setDuration(500);
+        left_point.startAnimation(ra);
+        ra.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
 
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                Intent it=new Intent();
+                Bundle bundle=new Bundle();
+                bundle.putString("nowCityName", city_name.getText().toString());
+                it.putExtras(bundle);
+                it.setClass(getApplicationContext(), CityActivity.class);
+                startActivityForResult(it,0);
+
+            }
+
+
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+        });
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+     if(resultCode==1){
+      String cityName=data.getExtras().get("selectCityName").toString();
+         city_name.setText(cityName);
+     }
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.left_point:
+                selectCity();
+                break;
+
+            default:
+                break;
+        }
+    }
 }

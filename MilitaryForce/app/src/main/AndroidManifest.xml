@@ -59,6 +59,10 @@
         <activity
             android:name=".activity.GuideActivity"
             android:label="GuideActivity" />
+
+        <activity android:name=".activity.CityActivity"
+            />
+
     </application>
 
 </manifest>
