@@ -17,12 +17,40 @@
 
     </FrameLayout>
 
-    <android.support.v4.app.FragmentTabHost
-        android:id="@+id/tabhost"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dip" >
 
-    </android.support.v4.app.FragmentTabHost>
+        <com.gh.app.militaryforce.widget.MyFragmentTabHost
+            android:id="@+id/tabhost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dip" >
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="0" />
+
+            </com.gh.app.militaryforce.widget.MyFragmentTabHost>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#D6D6D6"
+            />
+    </RelativeLayout>
+
+
+
+    <!--<android.support.v4.app.FragmentTabHost-->
+        <!--android:id="@+id/tabhost"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content">-->
+
+    <!--</android.support.v4.app.FragmentTabHost>-->
 
 
 </LinearLayout>

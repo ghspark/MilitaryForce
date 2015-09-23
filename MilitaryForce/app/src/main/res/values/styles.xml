@@ -17,6 +17,37 @@
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
 
+    <!--<style name="fill_fill">-->
+        <!--<item name="android:width">fill_parent</item>-->
+        <!--<item name="android:height">match_parent</item>-->
+    <!--</style>-->
+
+    <!--<style name="fill_wrap">-->
+        <!--<item name="android:width">fill_parent</item>-->
+        <!--<item name="android:height">wrap_content</item>-->
+    <!--</style>-->
+
+    <!--<style name="wrap_fill">-->
+        <!--<item name="android:width">wrap_content</item>-->
+        <!--<item name="android:height">fill_parent</item>-->
+    <!--</style>-->
+
+    <!--<style name="wrap_wrap">-->
+        <!--<item name="android:width">wrap_content</item>-->
+        <!--<item name="android:height">wrap_content</item>-->
+    <!--</style>-->
+
+
+    <style name="tab_title_style_over" >
+        <item name="android:textColor">@color/dark_blue</item>
+    </style>
+    <style name="tab_title_style_nor" >
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+
+
+
 
     
 </resources>

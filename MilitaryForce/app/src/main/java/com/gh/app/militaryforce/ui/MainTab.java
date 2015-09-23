@@ -9,16 +9,16 @@ public enum MainTab {
 	NEWS(0, R.string.main_tab_name_news, R.drawable.tab_icon_news,
 			NewsFragment.class),
 
-	PICTURES(1, R.string.main_tab_name_pics, R.drawable.tab_icon_news,
+	PICTURES(1, R.string.main_tab_name_pics, R.drawable.tab_icon_pics,
 			NewsFragment.class),
 
-	VIDEOS(2, R.string.main_tab_name_videos, R.drawable.tab_icon_news,
+	VIDEOS(2, R.string.main_tab_name_videos, R.drawable.tab_icon_videos,
 			NewsFragment.class),
 
-	ME(3, R.string.main_tab_name_me, R.drawable.tab_icon_news,
+	ME(3,R.string.main_tab_name_me, R.drawable.tab_icon_me,
 			NewsFragment.class);
-	
-	
+
+
 /*	QUICK(2, R.string.main_tab_name_quick, R.drawable.tab_icon_new,
 			null),
 */

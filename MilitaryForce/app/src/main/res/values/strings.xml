@@ -10,7 +10,7 @@
     <string name="main_tab_name_news">新闻</string>
     <string name="main_tab_name_pics">图片</string>
     <string name="main_tab_name_videos">视频</string>
-    <string name="main_tab_name_me">新闻</string>
+    <string name="main_tab_name_me">我的</string>
 
 
     <string name="hello_blank_fragment">Hello blank fragment</string>

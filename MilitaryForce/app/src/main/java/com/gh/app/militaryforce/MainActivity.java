@@ -3,20 +3,21 @@ package com.gh.app.militaryforce;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentTabHost;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TabHost;
 import android.widget.TextView;
 
 import com.gh.app.militaryforce.ui.MainTab;
+import com.gh.app.militaryforce.widget.MyFragmentTabHost;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
 public class MainActivity extends FragmentActivity {
     @Bind(R.id.tabhost)
-    FragmentTabHost mTabHost;
+    MyFragmentTabHost mTabHost;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +31,7 @@ public class MainActivity extends FragmentActivity {
     public void initViews(){
         //mTabHost.setup(getLocalActivityManager());
         mTabHost.setup(this, getSupportFragmentManager(), R.id.realtabcontent);
+        mTabHost.getTabWidget().setDividerDrawable(null);
         initTabs();
         mTabHost.setCurrentTab(0);
 
@@ -41,14 +43,16 @@ public class MainActivity extends FragmentActivity {
         for (int i = 0; i < size; i++) {
             MainTab mainTab = tabs[i];
             TabHost.TabSpec tab = mTabHost.newTabSpec(getString(mainTab.getResName()));
-            View indicator = LayoutInflater.from(getApplicationContext())
+            final View indicator = LayoutInflater.from(getApplicationContext())
                     .inflate(R.layout.tab_indicator, null);
             TextView title = (TextView) indicator.findViewById(R.id.tab_title);
+
+            ImageView icon= (ImageView) indicator.findViewById(R.id.tab_icon);
             Drawable drawable = this.getResources().getDrawable(
                     mainTab.getResIcon());
-            title.setCompoundDrawablesWithIntrinsicBounds(null, drawable, null,
+            icon.setImageDrawable(drawable);
+            title.setCompoundDrawablesWithIntrinsicBounds(null, null, null,
                     null);
-
             title.setText(getString(mainTab.getResName()));
             tab.setIndicator(indicator);
             tab.setContent(new TabHost.TabContentFactory() {
@@ -59,17 +63,22 @@ public class MainActivity extends FragmentActivity {
                 }
             });
             mTabHost.addTab(tab, mainTab.getClz(), null);
-            //mTabHost.addTab(tab);
 
-//            if (mainTab.equals(MainTab.ME)) {
-//                View cn = indicator.findViewById(R.id.tab_mes);
-//                mBvNotice = new BadgeView(MainActivity.this, cn);
-//                mBvNotice.setBadgePosition(BadgeView.POSITION_TOP_RIGHT);
-//                mBvNotice.setTextSize(TypedValue.COMPLEX_UNIT_SP, 10);
-//                mBvNotice.setBackgroundResource(R.drawable.notification_bg);
-//                mBvNotice.setGravity(Gravity.CENTER);
-//            }
-            //mTabHost.getTabWidget().getChildAt(i).setOnTouchListener(this);
+
+//            mTabHost.getTabWidget().getChildAt(i).setOnTouchListener(new View.OnTouchListener() {
+//                @Override
+//                public boolean onTouch(View v, MotionEvent event) {
+//                    for (int j = 0; j < size; j++) {
+//                        if(j==i){
+//                            TextView tab_title = (TextView) indicator.findViewById(R.id.tab_title);
+//                            tab_title.setTextColor(getResources().getColor(R.color.dark_blue));
+//                        }
+//                    }
+//                    return false;
+//                }
+//            });
+
+
         }
 
     }
