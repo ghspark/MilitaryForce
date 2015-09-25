@@ -42,7 +42,9 @@
 
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name"></activity>
+            android:label="@string/app_name"
+            android:theme="@style/StyledIndicators"
+            ></activity>
         <activity
             android:name=".activity.StartActivity"
             android:label="资讯一点通">
@@ -58,10 +60,15 @@
 
         <activity
             android:name=".activity.GuideActivity"
-            android:label="GuideActivity" />
+            android:label="GuideActivity"
+            />
 
         <activity android:name=".activity.CityActivity"
             />
+
+        <activity android:name=".activity.DomesticNewsActivity">
+
+        </activity>
 
     </application>
 

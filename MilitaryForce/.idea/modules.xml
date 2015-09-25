@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/MilitaryForce.iml" filepath="$PROJECT_DIR$/MilitaryForce.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/library/library.iml" filepath="$PROJECT_DIR$/library/library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pull_ref_library/pull_ref_library.iml" filepath="$PROJECT_DIR$/pull_ref_library/pull_ref_library.iml" />
     </modules>
   </component>
 </project>

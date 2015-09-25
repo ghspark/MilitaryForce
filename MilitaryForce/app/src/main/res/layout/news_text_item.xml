@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp">
+
+    <ImageView
+        android:id="@+id/d_pic"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/app_icon"
+        />
+
+
+    <TextView
+        android:id="@+id/d_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/d_pic"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/d_pic"
+        android:text="高航" />
+
+    <TextView
+        android:id="@+id/d_body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/d_title"
+        android:layout_below="@id/d_title"
+        android:layout_marginTop="3dp"
+        android:text="我是一个快乐的小画家" />
+
+
+    <TextView
+        android:id="@+id/comment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="20dp"
+        android:text="@string/comment" />
+
+    <TextView
+        android:id="@+id/d_comment_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/comment"
+        android:layout_toLeftOf="@id/comment"
+        android:text="1" />
+
+
+</RelativeLayout>

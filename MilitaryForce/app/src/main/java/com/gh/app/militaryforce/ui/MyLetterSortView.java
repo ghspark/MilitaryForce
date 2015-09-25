@@ -63,14 +63,14 @@ public class MyLetterSortView extends View {
 		int height = getHeight();// ��ȡ��Ӧ�߶�
 		int width = getWidth(); // ��ȡ��Ӧ���
 		// int singleHeight = height / mLetter.length;// ��ȡÿһ����ĸ�ĸ߶�
-		int singleHeight = 30;
+		int singleHeight = 40;
 
 		for (int i = 0; i < mLetter.length; i++) {
 			paint.setColor(Color.parseColor("#4876FF"));
 			paint.setTypeface(Typeface.DEFAULT_BOLD);
 			paint.setAntiAlias(true);
 			// paint.setTextSize(PixelUtil.sp2px(12));
-			paint.setTextSize(22);
+			paint.setTextSize(28);
 
 			// ѡ�е�״̬
 			if (i == choose) {

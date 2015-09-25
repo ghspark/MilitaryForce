@@ -48,13 +48,13 @@ public class NewsFragment extends Fragment {
 
     private void initDatas(){
         list_newstitle_name=new ArrayList<String>();
-        list_newstitle_name.add("国内焦点");
-        list_newstitle_name.add("国际焦点");
-        list_newstitle_name.add("军事焦点");
-        list_newstitle_name.add("财经焦点");
-        list_newstitle_name.add("互联网焦点");
-        list_newstitle_name.add("汽车焦点");
-        list_newstitle_name.add("理财最新");
+        list_newstitle_name.add("国内");
+        list_newstitle_name.add("国际");
+        list_newstitle_name.add("军事");
+        list_newstitle_name.add("财经");
+        list_newstitle_name.add("汽车");
+        list_newstitle_name.add("理财");
+        list_newstitle_name.add("互联网");
         mAdapter= new NewsFragmentPagerAdapter(getActivity().getSupportFragmentManager());
         mAdapter.addDatas(list_newstitle_name);
         if(pager!=null) {

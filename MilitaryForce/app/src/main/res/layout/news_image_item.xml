@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="90dp">
+
+    <TextView
+        android:id="@+id/new_title"
+        android:layout_width="match_parent"
+        android:text="我是一个快乐的小画家"
+       android:layout_marginTop="2dp"
+        android:layout_marginLeft="10dp"
+        android:layout_height="wrap_content" />
+    
+    <LinearLayout
+        android:id="@+id/pic_ll"
+        android:layout_alignLeft="@id/new_title"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <ImageView
+            android:id="@+id/news_iv1"
+            android:layout_width="0dp"
+            android:background="@drawable/app_icon"
+            android:layout_height="50dp"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:id="@+id/news_iv2"
+            android:layout_width="0dp"
+            android:background="@drawable/app_icon"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:id="@+id/news_iv3"
+            android:layout_width="0dp"
+            android:background="@drawable/app_icon"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="5dp"
+        >
+        <TextView
+            android:id="@+id/comment"
+            android:layout_width="wrap_content"
+            android:text="@string/comment"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:textSize="10sp"
+            android:layout_alignParentRight="true"
+            />
+
+        <TextView
+            android:id="@+id/news_comment_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/comment"
+            android:textSize="10sp"
+            android:layout_alignTop="@id/comment"
+            android:text="1"
+            />
+        </RelativeLayout>
+
+</RelativeLayout>

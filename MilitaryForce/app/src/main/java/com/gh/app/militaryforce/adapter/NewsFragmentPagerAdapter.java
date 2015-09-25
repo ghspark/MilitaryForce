@@ -4,7 +4,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-import com.gh.app.militaryforce.fragment.BaseListFragment;
+import com.gh.app.militaryforce.fragment.DomesticFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,7 +28,7 @@ public class NewsFragmentPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        return new BaseListFragment();
+        return new DomesticFragment();
     }
 
     @Override

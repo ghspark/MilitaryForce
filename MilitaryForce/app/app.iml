@@ -73,6 +73,7 @@
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/dex-cache" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/in.srain.cube/ultra-ptr/1.0.11/jars" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/incremental" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/jacoco" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/javaResources" />
@@ -92,6 +93,7 @@
     <orderEntry type="jdk" jdkName="Android API 23 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" exported="" name="appcompat-v7-23.0.1" level="project" />
+    <orderEntry type="library" exported="" name="ultra-ptr-1.0.11" level="project" />
     <orderEntry type="library" exported="" name="gson-2.2.4" level="project" />
     <orderEntry type="library" exported="" name="butterknife-7.0.1" level="project" />
     <orderEntry type="library" exported="" name="Volley" level="project" />
@@ -100,5 +102,6 @@
     <orderEntry type="library" exported="" name="litepal-1.2.1" level="project" />
     <orderEntry type="library" exported="" name="support-annotations-23.0.1" level="project" />
     <orderEntry type="module" module-name="library" exported="" />
+    <orderEntry type="module" module-name="pull_ref_library" exported="" />
   </component>
 </module>
